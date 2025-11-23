@@ -1,167 +1,189 @@
-<!DOCTYPE html>  <html lang="en">    <head>    
-<meta charset="UTF-8" />    
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />    
-<title>Group Seventeen?</title>  <style>    /* ======================= /
-/ ANIMASI HALAMAN & CARD  /
-/ ======================= */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Group Seventeen – Who Are They?</title>
+
+<style>
+/* ======================= */
+/* ANIMASI HALAMAN & CARD  */
+/* ======================= */
 
 /* Fade-in seluruh halaman */
 body {
-opacity: 0;
-animation: fadeIn 1.2s ease-in-out forwards;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
 }
 
-/* Foto utama fade-up */
-.main-photo {
-opacity: 0;
-transform: translateY(20px);
-animation: fadeUp 1s ease forwards;
-animation-delay: 0.4s;
-}
-
-/* Card muncul satu-satu */
-.card {
-opacity: 0;
-transform: translateY(20px);
-animation: fadeUp 0.9s ease forwards;
-}
-
-/* Urutan delay card */
-.card:nth-child(1) { animation-delay: 0.6s; }
-.card:nth-child(2) { animation-delay: 0.75s; }
-.card:nth-child(3) { animation-delay: 0.9s; }
-.card:nth-child(4) { animation-delay: 1.05s; }
-.card:nth-child(5) { animation-delay: 1.2s; }
-.card:nth-child(6) { animation-delay: 1.35s; }
-.card:nth-child(7) { animation-delay: 1.5s; }
-.card:nth-child(8) { animation-delay: 1.65s; }
-
-/* Tombol Back fade-in */
-.back-btn {
-opacity: 0;
-transform: translateY(10px);
-animation: fadeUp 1s ease forwards;
-animation-delay: 1.9s;
-}
-
-/* Keyframes */
 @keyframes fadeIn {
-to { opacity: 1; }
+    to { opacity: 1; }
+}
+
+/* Fade-up foto */
+.main-photo {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/* Fade-up card */
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.9s ease forwards;
+}
+
+/* Delay card muncul satu-satu */
+.card:nth-child(1){animation-delay:0.6s;}
+.card:nth-child(2){animation-delay:0.75s;}
+.card:nth-child(3){animation-delay:0.9s;}
+.card:nth-child(4){animation-delay:1.05s;}
+.card:nth-child(5){animation-delay:1.2s;}
+.card:nth-child(6){animation-delay:1.35s;}
+.card:nth-child(7){animation-delay:1.5s;}
+.card:nth-child(8){animation-delay:1.65s;}
+
+.back-btn {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 1.9s;
 }
 
 @keyframes fadeUp {
-to {
-opacity: 1;
-transform: translateY(0);
-}
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* ======================= /
-/   STYLE ASLI (dipertahankan) /
-/ ======================= */
+/* ======================= */
+/*        STYLE UTAMA      */
+/* ======================= */
 
 body {
-margin: 0;
-font-family: "Poppins", sans-serif;
-background: url('https://i.pinimg.com/1200x/71/bb/3c/71bb3ce0fcb9689736edaaca1df0f6fc.jpg') no-repeat center/cover fixed;
-z-index: -1;
-color: white;
-text-align: center;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: url('https://i.pinimg.com/1200x/71/bb/3c/71bb3ce0fcb9689736edaaca1df0f6fc.jpg') 
+                no-repeat center/cover fixed;
+    color: white;
+    text-align: center;
 }
 
 h1 {
-margin-top: 40px;
-font-size: 32px;
+    margin-top: 40px;
+    font-size: 32px;
 }
 
 h2 {
-font-size: 16px;
-margin-top: 5px;
+    font-size: 16px;
+    margin-top: 5px;
 }
 
 img.main-photo {
-width: 90%;
-max-width: 450px;
-border-radius: 16px;
-border: 2px solid rgba(255,255,255,0.4);
-margin-top: 30px;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 16px;
+    border: 2px solid rgba(255,255,255,0.4);
+    margin-top: 30px;
 }
 
 .profiles {
-margin-top: 40px;
-display: flex;
-flex-direction: column;
-gap: 30px;
-padding-bottom: 60px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 60px;
 }
 
 .card {
-width: 90%;
-max-width: 300px;
-margin: 0 auto;
-background: rgba(0, 0, 0, 0.15);
-border-radius: 16px;
-padding: 18px;
-border: 1px solid rgba(255,255,255,0.3);
-line-height: 1.6;
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,0.3);
+    line-height: 1.6;
 }
 
 .back-btn {
-margin-top: 30px;
-display: inline-block;
-padding: 12px 20px;
-background: rgba(0, 0, 0, 0.2);
-border-radius: 12px;
-border: 1px solid rgba(0, 0, 0, 0.3);
-cursor: pointer;
-text-decoration: none;
-color: white;
-transition: 0.3s;
+    margin-top: 30px;
+    display: inline-block;
+    padding: 12px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.3);
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
 }
 
 .back-btn:hover {
-background: rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.35);
 }
 
-h3 {
-font-size: 20px;
-margin-top: 30px;
-}
+</style>
+</head>
 
-</style>  </head>  <body>  <h1>Who are the group of seventeen?</h1>
+<body>
 
-<h2>4C's On The Stage 2025/2026 - SMP Khadijah</h2>  <img src="kelompok17.jpg" class="main-photo" />  <div class="profiles">    <div class="card">    
-    <strong>Name:</strong> Rosyikhotul Ilmiyah S.Pd.<br>    
-    <strong>Position:</strong> Fasilitator<br>    
-    <strong>Instagram:</strong> @rosyiilmiyah    
-  </div>    <div class="card">    
-    <strong>Name:</strong> Najwa Aurellia Rahmah<br>    
-    <strong>Position:</strong> Leader<br>    
-    <strong>Instagram:</strong> @r.aurelliaa    
-  </div>    <div class="card">    
-    <strong>Name:</strong> Dhira Azalia Putri Yuniars<br>    
-    <strong>Position:</strong> Editor<br>    
-    <strong>Instagram:</strong> @dhrazl    
-  </div>    <div class="card">    
-    <strong>Name:</strong> Alya Naswa Almaira<br>    
-    <strong>Position:</strong> Money Management<br>    
-    <strong>Instagram:</strong> @naswa9381    
-  </div>    <div class="card">    
-    <strong>Name:</strong> Hefa Meynissa Rachman<br>    
-    <strong>Position:</strong> Secretary<br>    
-    <strong>Instagram:</strong> @meynissaa    
-  </div>    <div class="card">    
-    <strong>Name:</strong> Xavi Azka Muharrami P.<br>    
-    <strong>Position:</strong> Deputy Leader<br>    
-    <strong>Instagram:</strong> @x_hernandes123    
-  </div>    <div class="card">    
-    <strong>Name:</strong> Kenzie Algafi Zunnur<br>    
-    <strong>Position:</strong> Equipment Team<br>    
-    <strong>Instagram:</strong> @kenjialgaf._    
-  </div>    <div class="card">    
-    <strong>Name:</strong> Ahmad Zainudzakhwan P.D.<br>    
-    <strong>Position:</strong> Equipment Team<br>    
-    <strong>Instagram:</strong> @dzn070411    
-  </div>  </div>  <a href="index.html" class="back-btn">⬅ Back to Home</a>  </body>
-  </style>  </head>  <body><h3>   </h3>
+<h1>Who are the group of seventeen?</h1>
+<h2>4C's On The Stage 2025/2026 - SMP Khadijah</h2>
+
+<img src="kelompok17.jpg" class="main-photo" />
+
+<div class="profiles">
+
+    <div class="card">
+        <strong>Name:</strong> Rosyikhotul Ilmiyah S.Pd.<br>
+        <strong>Position:</strong> Fasilitator<br>
+        <strong>Instagram:</strong> @rosyiilmiyah
+    </div>
+
+    <div class="card">
+        <strong>Name:</strong> Najwa Aurellia Rahmah<br>
+        <strong>Position:</strong> Leader<br>
+        <strong>Instagram:</strong> @r.aurelliaa
+    </div>
+
+    <div class="card">
+        <strong>Name:</strong> Dhira Azalia Putri Yuniars<br>
+        <strong>Position:</strong> Editor<br>
+        <strong>Instagram:</strong> @dhrazl
+    </div>
+
+    <div class="card">
+        <strong>Name:</strong> Alya Naswa Almaira<br>
+        <strong>Position:</strong> Money Management<br>
+        <strong>Instagram:</strong> @naswa9381
+    </div>
+
+    <div class="card">
+        <strong>Name:</strong> Hefa Meynissa Rachman<br>
+        <strong>Position:</strong> Secretary<br>
+        <strong>Instagram:</strong> @meynissaa
+    </div>
+
+    <div class="card">
+        <strong>Name:</strong> Xavi Azka Muharrami P.<br>
+        <strong>Position:</strong> Deputy Leader<br>
+        <strong>Instagram:</strong> @x_hernandes123
+    </div>
+
+    <div class="card">
+        <strong>Name:</strong> Kenzie Algafi Zunnur<br>
+        <strong>Position:</strong> Equipment Team<br>
+        <strong>Instagram:</strong> @kenjialgaf_
+    </div>
+
+    <div class="card">
+        <strong>Name:</strong> Ahmad Zainudzakhwan P.D.<br>
+        <strong>Position:</strong> Equipment Team<br>
+        <strong>Instagram:</strong> @dzn070411
+    </div>  </div>  <a href="index.html" class="back-btn">⬅ Back to Home</a>  </body>
+  </style>  </head>  <body><h3>   </h3>
 </html>
