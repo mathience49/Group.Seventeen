@@ -6,12 +6,12 @@
 <title>Group Seventeen – Who Are They?</title>
 
 <style>
+
 /* ======================= */
 /* ANIMASI HALAMAN & CARD  */
 /* ======================= */
 
-/* Fade-in seluruh halaman */
-body {
+.page {
     opacity: 0;
     animation: fadeIn 1.2s ease-in-out forwards;
 }
@@ -60,17 +60,35 @@ body {
 }
 
 /* ======================= */
-/*        STYLE UTAMA      */
+/*      BACKGROUND FIXED   */
 /* ======================= */
 
 body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background: url('https://i.pinimg.com/1200x/71/bb/3c/71bb3ce0fcb9689736edaaca1df0f6fc.jpg') 
-                no-repeat center/cover fixed;
-    color: white;
-    text-align: center;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
 }
+
+/* FIX BACKGROUND TIDAK GERAK */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://i.pinimg.com/1200x/71/bb/3c/71bb3ce0fcb9689736edaaca1df0f6fc.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1; /* selalu di belakang */
+}
+
+/* ======================= */
+/*        STYLE ISI        */
+/* ======================= */
 
 h1 {
     margin-top: 40px;
@@ -125,11 +143,12 @@ img.main-photo {
 .back-btn:hover {
     background: rgba(255,255,255,0.35);
 }
-
 </style>
 </head>
 
 <body>
+
+<div class="page">
 
 <h1>Who are the group of seventeen?</h1>
 <h2>4C's On The Stage 2025/2026 - SMP Khadijah</h2>
@@ -184,6 +203,13 @@ img.main-photo {
         <strong>Name:</strong> Ahmad Zainudzakhwan P.D.<br>
         <strong>Position:</strong> Equipment Team<br>
         <strong>Instagram:</strong> @dzn070411
-    </div>  </div>  <a href="index.html" class="back-btn">⬅ Back to Home</a>  </body>
-  </style>  </head>  <body><h3>   </h3>
+    </div>
+
+</div>
+
+<a href="index.html" class="back-btn">⬅ Back to Home</a>
+
+</div><!-- end page -->
+
+</body> <h1>   </h1>
 </html>
